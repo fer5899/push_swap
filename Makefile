@@ -6,7 +6,7 @@
 #    By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 17:12:12 by fgomez-d          #+#    #+#              #
-#    Updated: 2023/02/15 12:06:58 by fgomez-d         ###   ########.fr        #
+#    Updated: 2023/02/15 16:49:52 by fgomez-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,7 @@ all: $(NAME)
 
 $(NAME): $(OBJ) $(LIB_OBJ)
 	clear
-	$(CC) $(CPPFLAGS) $(OBJ) $(LIB_OBJ) -o $(NAME)
+	$(CC) $(CPPFLAGS) $(CFLAGS) $(OBJ) $(LIB_OBJ) -o $(NAME)
 
 %.o: %.c
 	$(CC) -g $(CFLAGS) $(CPPFLAGS) -c $< -o $@ 
@@ -42,6 +42,12 @@ clean:
 	
 fclean: clean
 	rm -f $(NAME)
+
+test: fclean $(OBJ) $(LIB_OBJ) test.c
+	clear
+	@$(CC) $(CPPFLAGS) test.c $(OBJ) $(LIB_OBJ) -o test
+	@./test
+	@rm test
 
 re: fclean all
 

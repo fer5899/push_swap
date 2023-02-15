@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 16:12:48 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/01/31 15:36:13 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/15 16:52:18 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -509,7 +509,7 @@ t_list	*ft_lstlast(t_list *lst);
 *	@param		*lst	Pointer to the first node of the list.
 *	@param		*new	Pointer to the node to add to the list.
 */
-void	ft_lstadd_back(t_list **lst, t_list *new);
+void	ft_lstadd_back(t_list *lst, t_list *new);
 
 /*
 *	@brief		Deletes and frees the given list node using the function del

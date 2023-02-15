@@ -1,0 +1,6 @@
+test
+test.c
+a.out
+*.o
+*.swp
+push_swap

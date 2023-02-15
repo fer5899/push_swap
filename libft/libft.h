@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 16:12:48 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/15 16:52:18 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/15 17:05:41 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -577,5 +577,9 @@ int		ft_count_char(char *str, char c);
 *	@return		The node at the start of the modified list.
 */
 t_list	*ft_lstrpl(t_list *bg, t_list *old, t_list *new, void (*del)(void *));
+
+t_list	*ft_lstpop(t_list *lst, t_list *to_pop);
+
+t_list	*ft_lstpop_idx(t_list *lst, int idx);
 
 #endif

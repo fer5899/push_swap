@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:01:56 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:22:47 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:41:28 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ int	ft_stksize(t_stk *stk)
 	if (stk == NULL)
 		return (0);
 	if (stk != stk->first)
-		return (-1);
+		stk = stk->first;
 	if (stk->next == stk->first)
 		return (1);
 	len = 1;

@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 13:20:52 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:41:08 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 16:18:38 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,7 @@ int	ft_getstkidx(t_stk *stk, t_stk *search)
 		stk = stk->next;
 		idx++;
 	}
+	if (stk == search)
+		return (idx);
 	return (-1);
 }

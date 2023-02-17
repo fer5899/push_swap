@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 16:03:41 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 16:16:41 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -121,6 +121,15 @@ void	ft_stkclear(t_stk **stk, void (*del)(void*));
 */
 void	ft_stkiter(t_stk *stk, void (*f)(void *));
 
-
+/*
+*	@brief		Removes the stack node `to_pop` from the stack `stk`, connecting
+*				the previous node to the next. Returns the removed node.
+*
+*	@param		*stk	Stack from which a node will be popped.
+*	@param		*to_pop	Node to be popped.
+*
+*	@return		The node that was popped, NULL if error.
+*/
+t_stk	*ft_stkpop(t_stk *stk, t_stk *to_pop);
 
 #endif

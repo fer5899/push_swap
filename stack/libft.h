@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 13:38:31 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:59:14 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,5 +63,15 @@ int		ft_getstkidx(t_stk *stk, t_stk *search);
 *	@return		The size of the stack.
 */
 int		ft_stksize(t_stk *stk);
+
+/*
+*	@brief		Gets the element in the position `idx` in the stack `stk`.
+*
+*	@param		stk	Stack where the node will be searched.
+*	@param		idx	Index of the element to get.
+*
+*	@return		The node in position `idx` or NULL if error or node not present.
+*/
+t_stk	*ft_getstknode(t_stk *stk, int idx);
 
 #endif

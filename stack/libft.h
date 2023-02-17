@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 13:10:13 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:32:41 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,5 +43,16 @@ t_stk	*ft_stknew(void *content);
 *	@return		The last element of the stack.
 */
 t_stk	*ft_stklast(t_stk *stk);
+
+/*
+*	@brief		Gets the index of the stack node `search` in the stack `stk`. Returns
+*				-1 if the node wasn't found.
+*
+*	@param		stk	Stack to be searched.
+*	@param		search	Stack node to search.
+*
+*	@return		The index of the searched node within the stack, -1 if is not present.
+*/
+int		ft_getstkidx(t_stk *stk, t_stk *search);
 
 #endif

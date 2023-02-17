@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 12:53:22 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:10:13 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,14 @@ typedef struct s_stk
 *	@return		The new stack node. NULL if memory allocation fails.
 */
 t_stk	*ft_stknew(void *content);
+
+/*
+*	@brief		Returns the last element of the stack.
+*
+*	@param		stk	Stack out of which the last element will be returned.
+*
+*	@return		The last element of the stack.
+*/
+t_stk	*ft_stklast(t_stk *stk);
 
 #endif

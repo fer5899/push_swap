@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 13:59:14 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:23:45 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,9 +58,9 @@ int		ft_getstkidx(t_stk *stk, t_stk *search);
 /*
 *	@brief		Gets the size of the stack.
 *
-*	@param		stk	Stack to get the size of.
+*	@param		stk	Stack to get the size of. Must be the first node of the stack.
 *
-*	@return		The size of the stack.
+*	@return		The size of the stack. -1 if the node passed is not the first element.
 */
 int		ft_stksize(t_stk *stk);
 

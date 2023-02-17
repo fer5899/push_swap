@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:23:45 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:27:05 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,10 +48,10 @@ t_stk	*ft_stklast(t_stk *stk);
 *	@brief		Gets the index of the stack node `search` in the stack `stk`. Returns
 *				-1 if the node wasn't found.
 *
-*	@param		stk	Stack to be searched.
+*	@param		stk	Stack to be searched. Must be the first node of the stack.
 *	@param		search	Stack node to search.
 *
-*	@return		The index of the searched node within the stack, -1 if is not present.
+*	@return		The index of the searched node within the stack, -1 if is not present or error.
 */
 int		ft_getstkidx(t_stk *stk, t_stk *search);
 

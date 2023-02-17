@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:28:34 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:36:47 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,8 @@ t_stk	*ft_stklast(t_stk *stk);
 *	@param		stk	Stack to be searched. Must be the first node of the stack.
 *	@param		search	Stack node to search.
 *
-*	@return		The index of the searched node within the stack, -1 if is not present or error.
+*	@return		The index of the searched node within the stack, 
+*				-1 if is not present or error.
 */
 int		ft_getstkidx(t_stk *stk, t_stk *search);
 
@@ -67,11 +68,20 @@ int		ft_stksize(t_stk *stk);
 /*
 *	@brief		Gets the element in the position `idx` in the stack `stk`.
 *
-*	@param		stk	Stack where the node will be searched. Must be the first node of the stack.
+*	@param		stk	Stack where the node will be searched. Must be the first 
+*					node of the stack.
 *	@param		idx	Index of the element to get.
 *
 *	@return		The node in position `idx` or NULL if error or node not present.
 */
 t_stk	*ft_getstknode(t_stk *stk, int idx);
+
+/*
+*	@brief		Sets the node `new_first` as the new first node of stack `stk`.
+*
+*	@param		stk			Stack in where the first position will change.
+*	@param		new_first	Node that will become the first in the stack.
+*/
+void	ft_stknewfirst(t_stk *stk, t_stk *new_first);
 
 #endif

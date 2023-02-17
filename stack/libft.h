@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:27:05 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:28:34 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ int		ft_stksize(t_stk *stk);
 /*
 *	@brief		Gets the element in the position `idx` in the stack `stk`.
 *
-*	@param		stk	Stack where the node will be searched.
+*	@param		stk	Stack where the node will be searched. Must be the first node of the stack.
 *	@param		idx	Index of the element to get.
 *
 *	@return		The node in position `idx` or NULL if error or node not present.

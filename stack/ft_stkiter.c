@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_stkiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 12:11:47 by fgomez-d          #+#    #+#             */
-/*   Updated: 2022/12/06 16:17:46 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 16:02:00 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_stkiter(t_stk *stk, void (*f)(void *))
 {
-	if (lst == NULL)
+	if (stk == NULL || f == NULL)
 		return ;
-	while (lst->next != NULL)
+	if (stk != stk->first)
+		stk = stk->first;
+	while (stk->next != stk->first)
 	{
-		f(lst->content);
-		lst = lst->next;
+		f(stk->content);
+		stk = stk->next;
 	}
-	f(lst->content);
+	f(stk->content);
 }

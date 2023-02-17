@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:59:38 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 16:03:41 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -111,5 +111,16 @@ void	ft_stkdelone(t_stk *stk, void (*del)(void*));
 *	@param		*del	Function used to delete the content of the stack node.
 */
 void	ft_stkclear(t_stk **stk, void (*del)(void*));
+
+/*
+*	@brief		Iterates the stack `stk` and applies the function f to the content
+*				of each node.
+*
+*	@param		*stk	Pointer to a node of a stack.
+*	@param		*f		Function to apply to the content of each node.
+*/
+void	ft_stkiter(t_stk *stk, void (*f)(void *));
+
+
 
 #endif

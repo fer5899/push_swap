@@ -6,24 +6,24 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:52:43 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 12:38:37 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:56:59 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_stkclear(t_stk **stk, void (*del)(void*))
 {
-	t_list	*next_node;
+	t_stk	*next_node;
 
-	if (*lst == NULL)
+	if (*stk == NULL || *stk != (*stk)->first)
 		return ;
-	while ((*lst)->next != NULL)
+	while ((*stk)->next != (*stk)->first)
 	{
-		next_node = (*lst)->next;
-		ft_lstdelone(*lst, del);
-		*lst = next_node;
+		next_node = (*stk)->next;
+		ft_stkdelone(*stk, del);
+		*stk = next_node;
 	}
-	ft_lstdelone(*lst, del);
-	*lst = NULL;
+	ft_stkdelone(*stk, del);
+	*stk = NULL;
 }

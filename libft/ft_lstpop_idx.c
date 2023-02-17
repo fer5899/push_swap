@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:06:11 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/15 17:06:44 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 12:13:25 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@ t_list	*ft_lstpop_idx(t_list *lst, int idx)
 	size = ft_lstsize(lst);
 	if (idx >= size || idx < 0)
 		return (NULL);
+	popped = lst;
 	while (idx > 0)
 	{
-		lst = lst->next;
+		popped = popped->next;
 		idx--;
 	}
-	popped = lst;
-	return (popped);
+	return (ft_lstpop(lst, popped));
 }

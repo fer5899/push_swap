@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 16:12:48 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/15 17:05:41 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 12:12:29 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -578,8 +578,26 @@ int		ft_count_char(char *str, char c);
 */
 t_list	*ft_lstrpl(t_list *bg, t_list *old, t_list *new, void (*del)(void *));
 
+/*
+*	@brief		Removes the list node `to_pop` from the list `lst`, conecting
+*				the previous node to the next. Returns the removed node.
+*
+*	@param		*lst	List from which a node will be popped.
+*	@param		*to_pop	Node to be popped.
+*
+*	@return		The node that was popped.
+*/
 t_list	*ft_lstpop(t_list *lst, t_list *to_pop);
 
+/*
+*	@brief		Removes the list node in the position `idx` from the list `lst`, 
+*				conecting the previous node to the next. Returns the removed node.
+*
+*	@param		*lst	List from which a node will be popped.
+*	@param		*idx	Index of the node to be popped.
+*
+*	@return		The node that was popped.
+*/
 t_list	*ft_lstpop_idx(t_list *lst, int idx);
 
 #endif

@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:42:03 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:50:23 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,5 +82,13 @@ t_stk	*ft_getstknode(t_stk *stk, int idx);
 *	@param		new_first	Node that will become the first in the stack.
 */
 void	ft_stknewfirst(t_stk *stk, t_stk *new_first);
+
+/*
+*	@brief		Inserts the stack node `new` into `stk` and makes it the first node.
+*
+*	@param		stk	Stack where the node will be inserted.
+*	@param		new	New stack node that will be added. It will become the first node.
+*/
+void	ft_stkadd_top(t_stk *stk, t_stk *new);
 
 #endif

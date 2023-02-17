@@ -1,23 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_stkadd_back.c                                   :+:      :+:    :+:   */
+/*   ft_stkadd_top.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:25:16 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 12:38:46 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:46:42 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list *lst, t_list *new)
+void	ft_stkadd_top(t_stk *stk, t_stk *new)
 {
-	if (new == NULL)
+	if (stk == NULL || new == NULL)
 		return ;
-	if (lst == NULL)
-		lst = new;
-	else
-		ft_lstlast(lst)->next = new;
+	if (stk != stk->first)
+		stk = stk->first;
+	new->next = stk;
+	new->first = new;
+	ft_stklast(stk)->next = new;
+	ft_stknewfirst(stk, new);
 }

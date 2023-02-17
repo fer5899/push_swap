@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:50:23 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 15:53:29 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,5 +90,15 @@ void	ft_stknewfirst(t_stk *stk, t_stk *new_first);
 *	@param		new	New stack node that will be added. It will become the first node.
 */
 void	ft_stkadd_top(t_stk *stk, t_stk *new);
+
+/*
+*	@brief		Deletes and frees the given stack node using the function del
+*				given as a parameter and free(3). The memory of next must not
+*				be freed.
+*
+*	@param		*stk	Pointer to the stack node to be deleted.
+*	@param		*del	Function used to delete the content of the stack node.
+*/
+void	ft_stkdelone(t_stk *stk, void (*del)(void*));
 
 #endif

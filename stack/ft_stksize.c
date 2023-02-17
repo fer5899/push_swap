@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstsize_bonus.c                                 :+:      :+:    :+:   */
+/*   ft_stksize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:01:56 by fgomez-d          #+#    #+#             */
-/*   Updated: 2022/12/06 16:17:59 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/17 13:36:43 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_lstsize(t_list *lst)
+int	ft_stksize(t_stk *stk)
 {
 	int	len;
 
-	if (lst == NULL)
+	if (stk == NULL)
 		return (0);
+	if (stk->next == stk->first)
+		return (1);
 	len = 1;
-	while (lst->next != NULL)
+	stk = stk->next;
+	while (stk->next != stk->first)
 	{
-		lst = lst->next;
+		stk = stk->next;
 		len++;
 	}
 	return (len);

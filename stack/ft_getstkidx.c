@@ -6,11 +6,11 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 13:20:52 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 16:18:38 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:51:37 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stack.h"
 
 int	ft_getstkidx(t_stk *stk, t_stk *search)
 {

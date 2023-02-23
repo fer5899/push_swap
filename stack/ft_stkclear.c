@@ -6,11 +6,11 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:52:43 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:56:59 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:52:41 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stack.h"
 
 void	ft_stkclear(t_stk **stk, void (*del)(void*))
 {

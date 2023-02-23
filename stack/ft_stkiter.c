@@ -6,11 +6,11 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 12:11:47 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 16:02:00 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:52:41 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stack.h"
 
 void	ft_stkiter(t_stk *stk, void (*f)(void *))
 {

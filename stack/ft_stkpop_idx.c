@@ -6,11 +6,11 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:06:11 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 16:24:34 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:52:40 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stack.h"
 
 t_stk	*ft_stkpop_idx(t_stk *stk, int idx)
 {

@@ -6,11 +6,11 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:46:16 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 15:51:59 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:52:40 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stack.h"
 
 void	ft_stkdelone(t_stk *stk, void (*del)(void*))
 {

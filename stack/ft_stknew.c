@@ -6,11 +6,11 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 10:30:33 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 13:23:38 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/23 15:52:41 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "stack.h"
 
 t_stk	*ft_stknew(void *content)
 {

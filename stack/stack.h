@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   stack.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/17 16:25:54 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/02/23 16:15:15 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT_H
-# define LIBFT_H
+#ifndef STACK_H
+# define STACK_H
 
 # include <stdlib.h>
 # include <unistd.h>
@@ -89,7 +89,7 @@ void	ft_stknewfirst(t_stk *stk, t_stk *new_first);
 *	@param		stk	Stack where the node will be inserted.
 *	@param		new	New stack node that will be added. It will become the first node.
 */
-void	ft_stkadd_top(t_stk *stk, t_stk *new);
+void	ft_stkadd_top(t_stk *stk, t_stk *new_node);
 
 /*
 *	@brief		Deletes and frees the given stack node using the function del

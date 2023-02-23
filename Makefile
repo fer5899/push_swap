@@ -6,13 +6,13 @@
 #    By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 17:12:12 by fgomez-d          #+#    #+#              #
-#    Updated: 2023/02/15 16:49:52 by fgomez-d         ###   ########.fr        #
+#    Updated: 2023/02/23 18:48:45 by fgomez-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 CC=gcc
 CFLAGS=-Wall -Wextra -Werror
-CPPFLAGS= -Ilibft -Iinc
+CPPFLAGS= -Ilibft -Iinc -Istack
 NAME=push_swap
 
 LIB_DIR=libft
@@ -23,6 +23,10 @@ SRC=$(SRC_DIR)/push_swap.c
 
 OBJ=$(SRC:.c=.o)
 
+STACK_SRC=$(wildcard stack/*.c)
+
+STACK_OBJ=$(STACK_SRC:.c=.o)
+
 all: $(NAME)
 
 $(NAME): $(OBJ) $(LIB_OBJ)
@@ -30,7 +34,7 @@ $(NAME): $(OBJ) $(LIB_OBJ)
 	$(CC) $(CPPFLAGS) $(CFLAGS) $(OBJ) $(LIB_OBJ) -o $(NAME)
 
 %.o: %.c
-	$(CC) -g $(CFLAGS) $(CPPFLAGS) -c $< -o $@ 
+	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@ 
 
 $(LIB_OBJ):
 	$(MAKE) -C libft
@@ -38,14 +42,21 @@ $(LIB_OBJ):
 clean:
 	rm -f $(OBJ)
 	rm -f $(OBJ_BONUS)
+	rm -f $(STACK_OBJ)
 	$(MAKE) -C libft fclean
 	
 fclean: clean
 	rm -f $(NAME)
 
-test: fclean $(OBJ) $(LIB_OBJ) test.c
+test: fclean $(OBJ) $(LIB_OBJ)
 	clear
 	@$(CC) $(CPPFLAGS) test.c $(OBJ) $(LIB_OBJ) -o test
+	@./test
+	@rm test
+
+stack: fclean $(STACK_OBJ) test.o
+	clear
+	@$(CC) $(CPPFLAGS) test.o $(STACK_OBJ) -o test
 	@./test
 	@rm test
 

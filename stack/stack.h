@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 13:59:51 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/08 14:29:46 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -167,5 +167,12 @@ void	ft_stk_rr(t_stk *stk);
 *	@param		*dest	The stack onto which the popped element will be added.
 */
 void	ft_stk_p(t_stk *orig, t_stk *dest);
+
+/*
+*	@brief		Swaps position of the first two elements of the stack `stk`.
+*
+*	@param		*stk	The stack in which the two first elements will be swapped.
+*/
+void	ft_stk_s(t_stk *stk);
 
 #endif

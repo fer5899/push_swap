@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 13:36:43 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/08 13:59:51 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -157,5 +157,15 @@ void	ft_stk_r(t_stk *stk);
 *	@param		*stk	The stack to be rotated.
 */
 void	ft_stk_rr(t_stk *stk);
+
+/*
+*	@brief		Pushes the first element from the stack `orig` to the stack
+*				`dest`. The second element from `orig` becomes the first and
+*				that element pushed is added to the top of the stack `dest`.
+*
+*	@param		*orig	The stack from which the first element will be popped.
+*	@param		*dest	The stack onto which the popped element will be added.
+*/
+void	ft_stk_p(t_stk *orig, t_stk *dest);
 
 #endif

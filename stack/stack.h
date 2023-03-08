@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/23 16:15:15 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/08 13:34:56 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -142,5 +142,21 @@ t_stk	*ft_stkpop(t_stk *stk, t_stk *to_pop);
 *	@return		The node that was popped.
 */
 t_stk	*ft_stkpop_idx(t_stk *stk, int idx);
+
+/*
+*	@brief		Rotates the whole stack `stk` upwards, moving the previous first
+*				element to the last position.
+*
+*	@param		*stk	The stack to be rotated.
+*/
+void	ft_stk_r(t_stk *stk);
+
+/*
+*	@brief		Rotates the whole stack `stk` downwards, moving the previous last
+*				element to the first position.
+*
+*	@param		*stk	The stack to be rotated.
+*/
+void	ft_stk_rr(t_stk *stk);
 
 #endif

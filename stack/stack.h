@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 12:39:53 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 13:34:56 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/08 13:36:43 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,8 +106,7 @@ void	ft_stkdelone(t_stk *stk, void (*del)(void*));
 *				as a parameter and free(3). The pointer to the first node of
 *				the stack must be set to NULL.
 *
-*	@param		*stk	Pointer to the first node of the stack. Must be the
-*						first node of the stack.
+*	@param		*stk	Pointer to the first node of the stack.
 *	@param		*del	Function used to delete the content of the stack node.
 */
 void	ft_stkclear(t_stk **stk, void (*del)(void*));

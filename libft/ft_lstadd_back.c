@@ -6,18 +6,18 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/06 11:25:16 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/02/15 16:46:58 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/08 15:20:11 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_back(t_list *lst, t_list *new)
+void	ft_lstadd_back(t_list *lst, t_list *new_node)
 {
-	if (new == NULL)
+	if (new_node == NULL)
 		return ;
 	if (lst == NULL)
-		lst = new;
+		lst = new_node;
 	else
-		ft_lstlast(lst)->next = new;
+		ft_lstlast(lst)->next = new_node;
 }

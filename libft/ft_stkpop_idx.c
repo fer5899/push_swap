@@ -1,19 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_stkpop_idx.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 10:54:37 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 15:19:31 by fgomez-d         ###   ########.fr       */
+/*   Created: 2023/02/15 16:06:11 by fgomez-d          #+#    #+#             */
+/*   Updated: 2023/03/08 15:21:46 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new_node)
+t_stk	*ft_stkpop_idx(t_stk *stk, int idx)
 {
-	new_node->next = *lst;
-	(*lst) = new_node;
+	int		size;
+	t_stk	*popped;
+
+	if (stk == NULL)
+		return (NULL);
+	size = ft_stksize(stk);
+	if (idx >= size || idx < 0)
+		return (NULL);
+	if (stk != stk->first)
+		stk = stk->first;
+	popped = stk;
+	while (idx > 0)
+	{
+		popped = popped->next;
+		idx--;
+	}
+	return (ft_stkpop(stk, popped));
 }

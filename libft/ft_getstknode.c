@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_getstknode.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 10:54:37 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 15:19:31 by fgomez-d         ###   ########.fr       */
+/*   Created: 2023/02/17 13:34:04 by fgomez-d          #+#    #+#             */
+/*   Updated: 2023/03/08 15:29:00 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new_node)
+t_stk	*ft_getstknode(t_stk *stk, int idx)
 {
-	new_node->next = *lst;
-	(*lst) = new_node;
+	if (idx < 0 || stk == NULL || idx >= ft_stksize(stk))
+		return (NULL);
+	if (stk != stk->first)
+		stk = stk->first;
+	if (idx == 0)
+		return (stk);
+	while (stk->next != stk->first)
+	{
+		if (idx == 0)
+			return (stk->next);
+		stk = stk->next;
+		idx--;
+	}
+	return (NULL);
 }

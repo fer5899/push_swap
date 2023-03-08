@@ -1,19 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_getstkidx.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 10:54:37 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 15:19:31 by fgomez-d         ###   ########.fr       */
+/*   Created: 2023/02/17 13:20:52 by fgomez-d          #+#    #+#             */
+/*   Updated: 2023/03/08 15:28:57 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new_node)
+int	ft_getstkidx(t_stk *stk, t_stk *search)
 {
-	new_node->next = *lst;
-	(*lst) = new_node;
+	int	idx;
+
+	idx = 0;
+	if (stk == NULL || search == NULL)
+		return (-1);
+	if (stk != stk->first)
+		stk = stk->first;
+	if (stk == search)
+		return (idx);
+	while (stk->next != stk->first)
+	{
+		if (stk == search)
+			return (idx);
+		stk = stk->next;
+		idx++;
+	}
+	if (stk == search)
+		return (idx);
+	return (-1);
 }

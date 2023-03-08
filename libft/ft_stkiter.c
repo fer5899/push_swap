@@ -1,19 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstadd_front.c                                  :+:      :+:    :+:   */
+/*   ft_stkiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/06 10:54:37 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 15:19:31 by fgomez-d         ###   ########.fr       */
+/*   Created: 2022/12/06 12:11:47 by fgomez-d          #+#    #+#             */
+/*   Updated: 2023/03/08 15:21:34 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new_node)
+void	ft_stkiter(t_stk *stk, void (*f)(void *))
 {
-	new_node->next = *lst;
-	(*lst) = new_node;
+	if (stk == NULL || f == NULL)
+		return ;
+	if (stk != stk->first)
+		stk = stk->first;
+	while (stk->next != stk->first)
+	{
+		f(stk->content);
+		stk = stk->next;
+	}
+	f(stk->content);
 }

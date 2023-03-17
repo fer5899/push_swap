@@ -6,7 +6,7 @@
 #    By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/01 13:41:20 by fgomez-d          #+#    #+#              #
-#    Updated: 2023/03/08 15:28:39 by fgomez-d         ###   ########.fr        #
+#    Updated: 2023/03/17 11:22:15 by fgomez-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ SRC=ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
 	ft_lstpop.c ft_lstpop_idx.c ft_stk_p.c ft_stk_r.c ft_stk_rr.c \
 	ft_stk_s.c ft_stknew.c ft_stkdelone.c ft_stkadd_top.c ft_stkiter.c \
 	ft_stkclear.c ft_stklast.c ft_stksize.c ft_stkpop.c ft_stkpop_idx.c \
-	ft_stknewfirst.c ft_getstkidx.c ft_getstknode.c
+	ft_stknewfirst.c ft_getstkidx.c ft_getstknode.c ft_quick_sort.c \
 	
 OBJ=$(SRC:.c=.o)
 

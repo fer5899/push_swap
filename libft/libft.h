@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 16:12:48 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 15:20:21 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/17 11:28:04 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -758,5 +758,14 @@ void	ft_stk_p(t_stk *orig, t_stk *dest);
 *	@param		*stk	The stack in which the two first elements will be swapped.
 */
 void	ft_stk_s(t_stk *stk);
+
+/*
+*	@brief		Sorts an array using the quick sort algorithm in ascending order.
+*
+*	@param		arr		The array to be sorted.
+*	@param		start	The index of the first element in the array to be sorted.
+*	@param		end		The index of the last element in the array to be sorted.
+*/
+void	quick_sort(int arr[], int start, int end);
 
 #endif

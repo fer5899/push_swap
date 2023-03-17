@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:07:46 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/17 11:43:48 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/17 13:16:55 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ typedef struct s_ps_stk
 	int	cost_b;
 }	t_ps_stk;
 
+int	is_int(char *str);
 int	merge_sort(int arr[], int size);
 
 #endif

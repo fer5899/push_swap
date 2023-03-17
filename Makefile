@@ -6,7 +6,7 @@
 #    By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 17:12:12 by fgomez-d          #+#    #+#              #
-#    Updated: 2023/03/16 13:23:36 by fgomez-d         ###   ########.fr        #
+#    Updated: 2023/03/17 12:28:47 by fgomez-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,7 @@ LIB_DIR=libft
 LIB_OBJ=$(LIB_DIR)/*.o
 
 SRC_DIR=src
-SRC=$(SRC_DIR)/push_swap.c $(SRC_DIR)/merge_sort.c
+SRC=$(SRC_DIR)/push_swap.c $(SRC_DIR)/merge_sort.c $(SRC_DIR)/check_args.c
 
 OBJ=$(SRC:.c=.o)
 
@@ -39,11 +39,12 @@ $(NAME): $(OBJ) $(LIB_OBJ)
 $(LIB_OBJ):
 	$(MAKE) -C libft
 
+deepclean: clean
+	$(MAKE) -C libft fclean
+	
 clean:
 	rm -f $(OBJ)
 	rm -f $(OBJ_BONUS)
-	rm -f $(STACK_OBJ)
-	$(MAKE) -C libft fclean
 	
 fclean: clean
 	rm -f $(NAME)

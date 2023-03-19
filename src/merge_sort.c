@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/15 12:50:21 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/17 12:04:24 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/17 13:30:02 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,6 +62,8 @@ int	merge_sort(int arr[], int size)
 	mid = size / 2;
 	left = init_sub_array(arr, 0, mid);
 	right = init_sub_array(arr, mid, size);
+	if (left.arr == NULL || right.arr == NULL)
+		return (0);
 	no_dups = merge_sort(left.arr, left.size);
 	if (no_dups)
 		no_dups = merge_sort(right.arr, right.size);

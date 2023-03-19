@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 15:50:17 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/17 13:15:12 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/19 12:48:32 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,12 @@ int	get_int_digits(char *str)
 	dig = 0;
 	if ((*str == '-' || *str == '+'))
 		str++;
+	while (*str == '0' && *str != '\0')
+		str++;
 	while (str[dig] != '\0' && str[dig] != '.')
 		dig++;
+	if (dig == 0)
+		return (1);
 	return (dig);
 }
 
@@ -69,35 +73,38 @@ int	is_int_size(char *str)
 int	is_int(char *str)
 {
 	int	point;
+	int	i;
 
 	point = 0;
+	i = 0;
 	if ((*str == '-' || *str == '+'))
-		str++;
-	while (*str != '\0')
+		i++;
+	while (str[i] != '\0')
 	{
-		if (*str == '.' && !point)
+		if (str[i] == '.' && !point)
 			point = 1;
 		else
 		{
-			if (!(ft_isdigit(*str)))
+			if (!(ft_isdigit(str[i])))
 				return (0);
-			if (point && *str != '0')
+			if (point && str[i] != '0')
 				return (0);
 		}
-		str++;
+		i++;
 	}
-	if (!is_int_size(str))
-		return (0);
-	return (1);
+	return (is_int_size(str));
 }
 
-int	check_args(char **argv)
+int	check_args(int argc, char **argv)
 {
-	while (*argv != NULL)
+	int	i;
+
+	i = 1;
+	while (i < argc)
 	{
-		if (!is_int(*argv))
+		if (!is_int(argv[i]))
 			return (0);
-		argv++;
+		i++;
 	}
 	return (1);
 }

@@ -6,7 +6,7 @@
 #    By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 17:12:12 by fgomez-d          #+#    #+#              #
-#    Updated: 2023/03/17 12:28:47 by fgomez-d         ###   ########.fr        #
+#    Updated: 2023/03/19 12:18:04 by fgomez-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ LIB_DIR=libft
 LIB_OBJ=$(LIB_DIR)/*.o
 
 SRC_DIR=src
-SRC=$(SRC_DIR)/push_swap.c $(SRC_DIR)/merge_sort.c $(SRC_DIR)/check_args.c
+SRC=$(SRC_DIR)/merge_sort.c $(SRC_DIR)/check_args.c $(SRC_DIR)/process_args.c \
+	$(SRC_DIR)/struct_utils.c
 
 OBJ=$(SRC:.c=.o)
 
@@ -29,9 +30,9 @@ STACK_OBJ=$(STACK_SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): $(OBJ) $(LIB_OBJ)
+$(NAME): fclean $(OBJ) $(LIB_OBJ)
 	clear
-	$(CC) $(CPPFLAGS) $(CFLAGS) $(OBJ) $(LIB_OBJ) -o $(NAME)
+	$(CC) $(CPPFLAGS) $(CFLAGS) push_swap.c $(OBJ) $(LIB_OBJ) -o $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@ 

@@ -6,7 +6,7 @@
 #    By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 17:12:12 by fgomez-d          #+#    #+#              #
-#    Updated: 2023/03/19 12:18:04 by fgomez-d         ###   ########.fr        #
+#    Updated: 2023/03/21 19:16:25 by fgomez-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ LIB_OBJ=$(LIB_DIR)/*.o
 
 SRC_DIR=src
 SRC=$(SRC_DIR)/merge_sort.c $(SRC_DIR)/check_args.c $(SRC_DIR)/process_args.c \
-	$(SRC_DIR)/struct_utils.c
+	$(SRC_DIR)/sort_utils.c $(SRC_DIR)/stack_moves.c $(SRC_DIR)/stack_sort.c
 
 OBJ=$(SRC:.c=.o)
 

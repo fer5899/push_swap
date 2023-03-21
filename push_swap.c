@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:07:25 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/19 14:04:06 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/21 17:56:31 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,10 +30,13 @@ int	main(int argc, char **argv)
 	{
 		stk = create_stk(argc, argv);
 		if (stk == NULL)
-			return (ft_printf_fd("ERROR\n", 2), 1);
-		ft_stkiter(stk, printstk);
+			return (ft_printf_fd("Error\n", 2), 1);
+		if (argc == 3)
+			two_elem_sort(stk);
+		if (argc == 4)
+			three_elem_sort(stk);
 	}
 	else
-		return (ft_printf_fd("ERROR\n", 2), 1);
+		return (ft_printf_fd("Error\n", 2), 1);
 	return (0);
 }

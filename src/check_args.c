@@ -6,12 +6,11 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 15:50:17 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/19 12:48:32 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/21 17:39:48 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
-
 
 int	get_int_digits(char *str)
 {
@@ -92,6 +91,8 @@ int	is_int(char *str)
 		}
 		i++;
 	}
+	if (((str[0] == '-' || str[0] == '+') && i == 1) || i == 0)
+		return (0);
 	return (is_int_size(str));
 }
 
@@ -108,5 +109,3 @@ int	check_args(int argc, char **argv)
 	}
 	return (1);
 }
-
-

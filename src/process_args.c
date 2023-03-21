@@ -6,11 +6,23 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:12:26 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/19 14:24:55 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/21 19:15:48 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
+
+t_elem_stk	*new_elem_stk(int value, int index)
+{
+	t_elem_stk	*data;
+
+	data = (t_elem_stk *) ft_calloc(1, sizeof(t_elem_stk));
+	if (data == NULL)
+		return (NULL);
+	data->value = value;
+	data->index = index;
+	return (data);
+}
 
 int	get_arr_idx(int *arr, int size, int val)
 {

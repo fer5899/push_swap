@@ -5,3 +5,8 @@ a.out
 *.swp
 push_swap
 .vscode
+0
+checker_OS
+push_swap_test.sh
+python_visualizer.py
+traces.txt

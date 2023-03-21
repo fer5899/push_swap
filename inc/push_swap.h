@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:07:46 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/21 19:15:57 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/21 19:37:45 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,5 +41,6 @@ void		rotate(t_stk *stk_a, t_stk *stk_b, char name);
 void		rev_rotate(t_stk *stk_a, t_stk *stk_b, char name);
 void		two_elem_sort(t_stk *stk);
 void		three_elem_sort(t_stk *stk);
+int			is_ordered(t_stk *stk);
 
 #endif

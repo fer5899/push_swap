@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:40:14 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/25 11:58:41 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/25 13:07:22 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,9 +35,12 @@ void	three_elem_sort(t_stk *stk)
 void	stack_sort(t_stk *stk_a, int argc)
 {
 	t_stk	*stk_b;
+	t_sizes	*sizes;
 
 	if (is_sorted(stk_a))
 		return ;
-	stk_b = initialize_stk_b(&stk_a, argc);
-	first_pass_to_b(stk_a, stk_b, argc);
+	sizes = init_sizes(argc - 1, 0);
+	stk_b = initialize_stk_b(&stk_a, sizes, argc);
+	first_pass_to_b(stk_a, stk_b, sizes, argc);
+	three_elem_sort(stk_a);
 }

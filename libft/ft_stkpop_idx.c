@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:06:11 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 15:21:46 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/25 10:55:44 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,5 +30,5 @@ t_stk	*ft_stkpop_idx(t_stk *stk, int idx)
 		popped = popped->next;
 		idx--;
 	}
-	return (ft_stkpop(stk, popped));
+	return (ft_stkpop(&stk, popped));
 }

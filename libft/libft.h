@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 16:12:48 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/23 14:16:19 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/25 10:30:24 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -713,7 +713,7 @@ void	ft_stkiter(t_stk *stk, void (*f)(void *));
 *
 *	@return		The node that was popped, NULL if error.
 */
-t_stk	*ft_stkpop(t_stk *stk, t_stk *to_pop);
+t_stk	*ft_stkpop(t_stk **stk, t_stk *to_pop);
 
 /*
 *	@brief		Removes the stack node in the position `idx` from the stack `stk`, 

@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:31:20 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/25 11:43:20 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/25 11:58:28 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,17 +42,19 @@ t_stk	*initialize_stk_b(t_stk **stk_a, int argc)
 	return (stk_b);
 }
 
-void	lower_half_to_b(t_stk *stk_a, t_stk *stk_b, int argc)
+void	first_pass_to_b(t_stk *stk_a, t_stk *stk_b, int argc)
 {
-	while (ft_stksize(stk_a) >= argc / 2)
+	while (ft_stksize(stk_a) > argc / 2)
 	{
 		if (((t_elem_stk *)(stk_a->first->content))->index <= argc / 2)
 			push(&stk_a, &stk_b, 'b');
 		else
 			rotate(stk_a, stk_a, 'a');
-		update_pos(stk_a);
-		update_pos(stk_b);
 	}
+	while (ft_stksize(stk_a) > 3)
+		push(&stk_a, &stk_b, 'b');
+	update_pos(stk_a);
+	update_pos(stk_b);
 }
 
 

@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:07:46 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/25 11:42:02 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/25 11:58:37 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ void		stack_sort(t_stk *stk_A, int argc);
 int			is_sorted(t_stk *stk);
 void		update_pos(t_stk *stk);
 t_stk		*initialize_stk_b(t_stk **stk_a, int argc);
-void		lower_half_to_b(t_stk *stk_a, t_stk *stk_b, int argc);
+void		first_pass_to_b(t_stk *stk_a, t_stk *stk_b, int argc);
 
 void	printstk(void *stk_elem);
 

@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:40:14 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/25 11:42:08 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/25 11:58:41 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,5 +39,5 @@ void	stack_sort(t_stk *stk_a, int argc)
 	if (is_sorted(stk_a))
 		return ;
 	stk_b = initialize_stk_b(&stk_a, argc);
-	lower_half_to_b(stk_a, stk_b, argc);
+	first_pass_to_b(stk_a, stk_b, argc);
 }

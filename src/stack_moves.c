@@ -6,18 +6,18 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 16:15:52 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/21 16:54:55 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/23 14:17:51 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-void	push(t_stk *stk_orig, t_stk *stk_dest, char name)
+void	push(t_stk **stk_orig, t_stk **stk_dest, char dest_name)
 {
-	if (stk_orig != NULL && stk_dest != NULL)
+	if (*stk_orig != NULL && *stk_dest != NULL)
 	{
 		ft_stk_p(stk_orig, stk_dest);
-		ft_printf("p%c\n", name);
+		ft_printf("p%c\n", dest_name);
 	}
 }
 

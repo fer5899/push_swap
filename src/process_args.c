@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:12:26 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/21 19:15:48 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/25 12:40:20 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ void	update_pos(t_stk *stk)
 	int			pos;
 	t_elem_stk	*elem;
 
-	pos = 1;
+	pos = 0;
 	if (stk != stk->first)
 		stk = stk->first;
 	while (stk->next != stk->first)

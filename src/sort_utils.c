@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:31:20 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/25 11:58:28 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/25 12:39:55 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,8 +37,6 @@ t_stk	*initialize_stk_b(t_stk **stk_a, int argc)
 	ft_stk_r(*stk_a);
 	stk_b = ft_stkpop(stk_a, ft_stklast(*stk_a));
 	ft_printf("pb\n");
-	update_pos(*stk_a);
-	update_pos(stk_b);
 	return (stk_b);
 }
 

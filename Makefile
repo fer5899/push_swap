@@ -6,7 +6,7 @@
 #    By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/07 17:12:12 by fgomez-d          #+#    #+#              #
-#    Updated: 2023/03/21 19:16:25 by fgomez-d         ###   ########.fr        #
+#    Updated: 2023/03/25 11:45:30 by fgomez-d         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,12 @@ NAME=push_swap
 LIB_DIR=libft
 LIB_OBJ=$(LIB_DIR)/*.o
 
+##### DELETE TESTING STUFF ######
+
 SRC_DIR=src
 SRC=$(SRC_DIR)/merge_sort.c $(SRC_DIR)/check_args.c $(SRC_DIR)/process_args.c \
-	$(SRC_DIR)/sort_utils.c $(SRC_DIR)/stack_moves.c $(SRC_DIR)/stack_sort.c
+	$(SRC_DIR)/sort_utils.c $(SRC_DIR)/stack_moves.c $(SRC_DIR)/stack_sort.c \
+	$(SRC_DIR)/testing.c
 
 OBJ=$(SRC:.c=.o)
 
@@ -30,12 +33,15 @@ STACK_OBJ=$(STACK_SRC:.c=.o)
 
 all: $(NAME)
 
-$(NAME): fclean $(OBJ) $(LIB_OBJ)
+$(NAME): $(OBJ) $(LIB_OBJ)
 	clear
 	$(CC) $(CPPFLAGS) $(CFLAGS) push_swap.c $(OBJ) $(LIB_OBJ) -o $(NAME)
 
 %.o: %.c
 	$(CC) $(CFLAGS) $(CPPFLAGS) -c $< -o $@ 
+
+lib:
+	$(MAKE) -C libft
 
 $(LIB_OBJ):
 	$(MAKE) -C libft

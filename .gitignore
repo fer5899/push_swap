@@ -10,3 +10,5 @@ checker_OS
 push_swap_test.sh
 python_visualizer.py
 traces.txt
+stack
+.DS_Store

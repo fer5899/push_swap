@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:31:20 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/04/12 18:19:14 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 19:27:30 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,12 +35,12 @@ int	is_sorted(t_stk *stk)
 	stk = stk->first;
 	while (stk->next != stk->first)
 	{
-		if (((t_elem *)stk->content)->pos
+		if (((t_elem *)stk->content)->pos + 1
 			!= ((t_elem *)stk->content)->index)
 			return (0);
 		stk = stk->next;
 	}
-	if (((t_elem *)stk->content)->pos
+	if (((t_elem *)stk->content)->pos + 1
 		!= ((t_elem *)stk->content)->index)
 		return (0);
 	return (1);

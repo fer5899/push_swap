@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:40:14 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/04/12 19:08:04 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 19:57:30 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,10 +53,10 @@ void	end_rotations(t_stk *stk_a, t_sizes *sz)
 	t_elem	*elem;
 
 	elem = (t_elem *) stk_a->first->content;
-	if (elem->index > sz->a / 2)
-		rotate(stk_a, stk_a, 'a', sz->a - elem->index + 1);
-	else
+	if (elem->index - 1 <= sz->a / 2)
 		rev_rotate(stk_a, stk_a, 'a', elem->index - 1);
+	else
+		rotate(stk_a, stk_a, 'a', sz->a - elem->index + 1);
 }
 
 void	stack_sort(t_stk *stk_a, int argc)
@@ -79,5 +79,7 @@ void	stack_sort(t_stk *stk_a, int argc)
 		cheapest = find_cheapest(stk_b, sizes, sizes->a + sizes->b);
 		sort_element(&stk_a, &stk_b, sizes, cheapest);
 	}
-	end_rotations(stk_a, sizes);
+	update_pos(stk_a);
+	if (!is_sorted(stk_a))
+		end_rotations(stk_a, sizes);
 }

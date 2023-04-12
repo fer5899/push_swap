@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:12:26 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/25 13:44:22 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:50:00 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	get_arr_idx(int *arr, int size, int val)
 
 void	update_pos(t_stk *stk)
 {
-	int			pos;
+	int		pos;
 	t_elem	*elem;
 
 	pos = 0;
@@ -81,6 +81,8 @@ t_stk	*fill_stk(int *orig, int *sorted, int argc)
 		i--;
 	}
 	update_pos(stk);
+	free(orig);
+	free(sorted);
 	return (stk);
 }
 

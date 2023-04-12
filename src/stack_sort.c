@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/21 17:40:14 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/04/12 19:57:30 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:51:50 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,4 +82,6 @@ void	stack_sort(t_stk *stk_a, int argc)
 	update_pos(stk_a);
 	if (!is_sorted(stk_a))
 		end_rotations(stk_a, sizes);
+	ft_stkclear(&stk_a, free);
+	free(sizes);
 }

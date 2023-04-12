@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:31:20 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/04/12 20:39:16 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:55:51 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,5 +92,3 @@ void	pass_to_b(t_stk **stk_a, t_stk *stk_b, t_sizes *sizes, int argc)
 		*stk_a = next;
 	}
 }
-
-

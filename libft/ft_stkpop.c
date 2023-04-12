@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 16:06:11 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/25 11:30:23 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/28 11:38:34 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,8 @@ void	redirect_links(t_stk **stk, t_stk *to_pop, t_stk *prev)
 	*stk = (*stk)->next;
 	to_pop->next = to_pop;
 	to_pop->first = to_pop;
-	ft_stknewfirst(*stk, *stk);
+	if ((*stk)->first == to_pop)
+		ft_stknewfirst(*stk, *stk);
 }
 
 t_stk	*ft_stkpop(t_stk **stk, t_stk *to_pop)

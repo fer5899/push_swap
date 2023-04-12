@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/25 13:12:13 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/04/12 18:25:50 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:04:47 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,9 +94,9 @@ int	find_cheapest(t_stk *b, t_sizes *sz, int min_cost)
 			b_elem->cost_b = b_elem->pos;
 		else
 			b_elem->cost_b = b_elem->pos - sz->b;
-		if (ft_abs(b_elem->cost_a - b_elem->cost_b) < min_cost)
+		if (ft_abs(b_elem->cost_a) + ft_abs(b_elem->cost_b) < min_cost)
 		{
-			min_cost = ft_abs(b_elem->cost_a - b_elem->cost_b);
+			min_cost = ft_abs(b_elem->cost_a) + ft_abs(b_elem->cost_b);
 			cheapest_idx = b_elem->pos;
 		}
 		b = b->next;

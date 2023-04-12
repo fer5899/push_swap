@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/30 16:12:48 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/25 10:30:24 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:04:04 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -767,5 +767,26 @@ void	ft_stk_s(t_stk *stk);
 *	@param		end		The index of the last element in the array to be sorted.
 */
 void	quick_sort(int arr[], int start, int end);
+
+/*
+*	@brief		Calculates the absolute value of an integer n.
+*
+*	@param		*n	Number to calculate the absolute value of.
+*
+*	@return		The absolute value of n.
+*/
+int		ft_abs(int n);
+
+/*
+*	@brief		Returns the smallest or the biggest integer, either a or b,
+*				depending on the state of find_min.
+*
+*	@param		*a	Integer to compare.
+*	@param		*b	Integer to compare.
+*	@param		*find_min	Boolean that determines the type of comparison.
+*
+*	@return		The smallest integer if find_min is 1, the biggest if it is 0.
+*/
+int		ft_minmax(int a, int b, int find_min);
 
 #endif

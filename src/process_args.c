@@ -6,17 +6,17 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:12:26 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/25 12:40:20 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/03/25 13:44:22 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../inc/push_swap.h"
 
-t_elem_stk	*new_elem_stk(int value, int index)
+t_elem	*new_elem_stk(int value, int index)
 {
-	t_elem_stk	*data;
+	t_elem	*data;
 
-	data = (t_elem_stk *) ft_calloc(1, sizeof(t_elem_stk));
+	data = (t_elem *) ft_calloc(1, sizeof(t_elem));
 	if (data == NULL)
 		return (NULL);
 	data->value = value;
@@ -41,20 +41,20 @@ int	get_arr_idx(int *arr, int size, int val)
 void	update_pos(t_stk *stk)
 {
 	int			pos;
-	t_elem_stk	*elem;
+	t_elem	*elem;
 
 	pos = 0;
 	if (stk != stk->first)
 		stk = stk->first;
 	while (stk->next != stk->first)
 	{
-		elem = (t_elem_stk *) stk->content;
+		elem = (t_elem *) stk->content;
 		elem->pos = pos;
 		stk->content = elem;
 		stk = stk->next;
 		pos++;
 	}
-	elem = (t_elem_stk *) stk->content;
+	elem = (t_elem *) stk->content;
 	elem->pos = pos;
 	stk->content = elem;
 }

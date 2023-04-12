@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/08 16:31:20 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/04/12 19:27:30 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 20:39:16 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,12 @@ t_stk	*initialize_stk_b(t_stk **stk_a, t_sizes *sizes, int argc)
 	t_stk	*stk_b;
 
 	while (((t_elem *)((*stk_a)->first->content))->index > (argc - 1) / 2)
-		rotate(*stk_a, *stk_a, 'a', 1);
+	{
+		if (((t_elem *)(ft_stklast(*stk_a)->content))->index <= (argc - 1) / 2)
+			rev_rotate(*stk_a, *stk_a, 'a', 1);
+		else
+			rotate(*stk_a, *stk_a, 'a', 1);
+	}
 	ft_stk_r(*stk_a);
 	stk_b = ft_stkpop(stk_a, ft_stklast(*stk_a));
 	ft_printf("pb\n");
@@ -73,6 +78,9 @@ void	pass_to_b(t_stk **stk_a, t_stk *stk_b, t_sizes *sizes, int argc)
 			push(stk_a, &stk_b, sizes, 'b');
 			*stk_a = next;
 		}
+		else if (((t_elem *)(ft_stklast(*stk_a)->content))->index
+			<= (argc - 1) / 2)
+			rev_rotate(*stk_a, *stk_a, 'a', 1);
 		else
 			rotate(*stk_a, *stk_a, 'a', 1);
 	}

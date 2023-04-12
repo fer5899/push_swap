@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/17 13:34:04 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/08 15:29:00 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 18:51:49 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,24 @@
 
 t_stk	*ft_getstknode(t_stk *stk, int idx)
 {
-	if (idx < 0 || stk == NULL || idx >= ft_stksize(stk))
+	int	i;
+	int	size;
+
+	size = ft_stksize(stk);
+	if (idx < 0 || stk == NULL || idx >= size)
 		return (NULL);
 	if (stk != stk->first)
 		stk = stk->first;
 	if (idx == 0)
 		return (stk);
-	while (stk->next != stk->first)
+	i = 1;
+	stk = stk->next;
+	while (i < size)
 	{
-		if (idx == 0)
-			return (stk->next);
+		if (i == idx)
+			return (stk);
 		stk = stk->next;
-		idx--;
+		i++;
 	}
 	return (NULL);
 }

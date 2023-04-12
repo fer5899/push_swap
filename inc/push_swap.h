@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:07:46 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/04/12 18:26:00 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 21:57:17 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,5 @@ void		update_stacks_pos(t_stk *stk_a, t_stk *stk_b);
 void		update_target_pos(t_stk *a, t_stk *b, t_sizes *sz);
 int			find_cheapest(t_stk *b, t_sizes *sz, int min_cost);
 void		rotation(t_stk *stk_a, t_stk *stk_b, int a_rot, int b_rot);
-
-void		printstk(void *stk_elem);
 
 #endif

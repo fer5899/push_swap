@@ -6,7 +6,7 @@
 /*   By: fgomez-d <fgomez-d@student.42malaga.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/15 12:07:25 by fgomez-d          #+#    #+#             */
-/*   Updated: 2023/03/23 12:51:51 by fgomez-d         ###   ########.fr       */
+/*   Updated: 2023/04/12 19:45:40 by fgomez-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	main(int argc, char **argv)
 {
 	t_stk	*stk;
 
-	if (argc <= 2)
+	if (argc < 2)
 		return (0);
 	if (check_args(argc, argv))
 	{
@@ -25,7 +25,7 @@ int	main(int argc, char **argv)
 			return (ft_printf_fd("Error\n", 2), 1);
 		if (argc == 3)
 			two_elem_sort(stk);
-		if (argc == 4)
+		else if (argc == 4)
 			three_elem_sort(stk);
 		else
 			stack_sort(stk, argc);
